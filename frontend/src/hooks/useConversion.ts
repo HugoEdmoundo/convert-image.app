@@ -7,7 +7,7 @@ import type {
   ConversionResult,
   ConversionState,
 } from '../types'
-import { fetchSuggestions, uploadAndConvert, createEventSource } from '../services/api'
+import { fetchSuggestions, uploadAndConvert, createEventSource, buildDownloadUrl } from '../services/api'
 
 export function useConversion() {
   const [state, setState] = useState<ConversionState>('idle')
@@ -69,7 +69,8 @@ export function useConversion() {
 
         es.addEventListener('complete', (e) => {
           const data: ConversionResult = JSON.parse(e.data)
-          setResult(data)
+          const fullUrl = buildDownloadUrl(jobId)
+          setResult({ ...data, download_url: fullUrl })
           setState('done')
           es.close()
           resolve()
