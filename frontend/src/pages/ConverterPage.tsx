@@ -50,7 +50,7 @@ export default function ConverterPage() {
               </div>
               <span
                 className={`ml-2 text-xs font-medium ${
-                  isActive ? 'text-indigo-600' : isDone ? 'text-gray-700' : 'text-gray-400'
+                  isActive ? 'text-brand-orange' : isDone ? 'text-gray-700' : 'text-gray-400'
                 }`}
               >
                 {s.label}
@@ -110,7 +110,7 @@ export default function ConverterPage() {
                 </span>
               ) : (
                 <span className="flex items-center justify-center gap-2">
-                  ✦ Convert to {selectedFormat.name}
+                  Convert to {selectedFormat.name}
                 </span>
               )}
             </button>

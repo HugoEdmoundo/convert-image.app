@@ -59,9 +59,9 @@ export default function FileUpload({ onFile, fileInfo }: Props) {
   if (fileInfo) {
     const cat = getCategoryForExtension(fileInfo.extension)
     return (
-      <div className="rounded-2xl border-2 border-indigo-200 bg-indigo-50/50 p-6">
+      <div className="rounded-2xl border-2 border-brand-orange/20 bg-orange-50/50 p-6">
         <div className="flex items-start gap-4">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-indigo-100 text-2xl">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand-orange/10 to-brand-gold/10 text-2xl">
             {cat?.emoji ?? '📁'}
           </div>
           <div className="min-w-0 flex-1">
@@ -101,7 +101,7 @@ export default function FileUpload({ onFile, fileInfo }: Props) {
         className="hidden"
         onChange={onChange}
       />
-      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-100 text-3xl text-indigo-500">
+      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-orange/10 to-brand-gold/10 text-3xl text-brand-orange">
         ⬆
       </div>
       <p className="text-lg font-semibold text-gray-700">

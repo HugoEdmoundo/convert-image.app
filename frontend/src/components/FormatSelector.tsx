@@ -23,7 +23,7 @@ export default function FormatSelector({ suggestion, selected, onSelect }: Props
         {suggestion.all.length > suggestion.suggested.length && (
           <button
             onClick={() => setShowAll(!showAll)}
-            className="text-xs font-medium text-indigo-600 hover:text-indigo-500"
+            className="text-xs font-medium text-brand-orange hover:text-amber-600"
           >
             {showAll ? 'Show suggested' : `Show all ${suggestion.all.length} formats`}
           </button>
@@ -38,7 +38,7 @@ export default function FormatSelector({ suggestion, selected, onSelect }: Props
               onClick={() => onSelect(fmt)}
               className={`inline-flex items-center gap-1.5 rounded-xl border-2 px-4 py-2 text-sm font-medium transition-all duration-150 ${
                 isSelected
-                  ? 'border-indigo-500 bg-indigo-50 text-indigo-700 shadow-sm'
+                  ? 'border-brand-orange bg-orange-50 text-brand-orange shadow-sm'
                   : 'border-gray-200 bg-white text-gray-600 hover:border-gray-300 hover:bg-gray-50'
               }`}
             >

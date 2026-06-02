@@ -23,12 +23,12 @@ export default function ConversionProgress({ progress }: Props) {
     <div className="card space-y-6">
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-semibold text-gray-700">Conversion Progress</h3>
-        <span className="text-sm font-bold text-indigo-600">{progress.percent}%</span>
+        <span className="text-sm font-bold text-brand-orange">{progress.percent}%</span>
       </div>
 
       <div className="h-2.5 w-full overflow-hidden rounded-full bg-gray-100">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-indigo-600 transition-all duration-500 ease-out"
+          className="h-full rounded-full bg-gradient-to-r from-brand-orange to-brand-gold transition-all duration-500 ease-out"
           style={{ width: `${progress.percent}%` }}
         />
       </div>
@@ -42,9 +42,9 @@ export default function ConversionProgress({ progress }: Props) {
               <div
                 className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-all duration-300 ${
                   isDone
-                    ? 'bg-indigo-600 text-white'
+                    ? 'bg-brand-orange text-white'
                     : isActive
-                      ? 'border-2 border-indigo-500 bg-indigo-50 text-indigo-600'
+                      ? 'border-2 border-brand-orange bg-orange-50 text-brand-orange'
                       : 'border-2 border-gray-200 bg-white text-gray-300'
                 }`}
               >
@@ -55,7 +55,7 @@ export default function ConversionProgress({ progress }: Props) {
                   isDone
                     ? 'font-medium text-gray-900'
                     : isActive
-                      ? 'font-semibold text-indigo-700'
+                      ? 'font-semibold text-brand-orange'
                       : 'text-gray-400'
                 }`}
               >
@@ -66,7 +66,7 @@ export default function ConversionProgress({ progress }: Props) {
         })}
       </div>
 
-      <p className="animate-pulse text-center text-sm font-medium text-indigo-600">
+      <p className="animate-pulse text-center text-sm font-medium text-brand-orange">
         {progress.message}
       </p>
     </div>
